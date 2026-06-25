@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kategori - Forum Diskusi</title>
+
+  <style>
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background-color: #f5f6fa;
+    }
+
+    header{
+      background-color: #2f3640;
+      color: white;
+
+      padding: 15px 30px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1{
+      font-size: 22px;
+    }
+
+    nav a{
+      color: white;
+      text-decoration: none;
+      margin-left: 35px;
+      transition: 0.3s;
+    }
+
+    nav a:hover{
+      color: #dcdde1;
+    }
+
+    .title{
+      padding: 30px;
+    }
+
+    .title h2{
+      font-size: 35px;
+      color: #2f3640;
+      margin-bottom: 10px;
+    }
+
+    .title p{
+      color: #555;
+    }
+
+    .category-container{
+      padding: 0 30px 30px;
+
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card{
+      background-color: white;
+
+      padding: 25px;
+
+      border-radius: 12px;
+
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
+      transition: 0.3s;
+    }
+
+    .card:hover{
+      transform: translateY(-5px);
+    }
+
+    .card h3{
+      color: #2f3640;
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+
+    .card p{
+      color: #666;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .btn{
+      display: inline-block;
+
+      background-color: #40739e;
+      color: white;
+
+      padding: 10px 15px;
+
+      border-radius: 6px;
+
+      text-decoration: none;
+
+      transition: 0.3s;
+    }
+
+    .btn:hover{
+      background-color: #2f3640;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <header>
+
+    <h1>Forum Diskusi</h1>
+
+    <nav>
+      <a href="landing.html">Home</a>
+      <a href="kategori.html">Kategori</a>
+      <a href="login.html">Login</a>
+    </nav>
+
+  </header>
+
+
+  <section class="title">
+
+    <h2>Kategori Diskusi</h2>
+
+    <p>
+      Pilih kategori yang ingin kamu diskusikan bersama pengguna lain.
+    </p>
+
+  </section>
+
+
+  <section class="category-container">
+
+    <div class="card">
+
+      <h3>Teknologi</h3>
+
+      <p>
+        Diskusi tentang programming, AI, gadget,
+        website, dan perkembangan teknologi terbaru.
+      </p>
+
+      <a href="#" class="btn">Lihat Diskusi</a>
+
+    </div>
+
+    <div class="card">
+
+      <h3>Game</h3>
+
+      <p>
+        Bahas game favoritmu, tips bermain,
+        update terbaru, dan komunitas gaming.
+      </p>
+
+      <a href="#" class="btn">Lihat Diskusi</a>
+
+    </div>
+
+    <div class="card">
+
+      <h3>Pendidikan</h3>
+
+      <p>
+        Tempat berbagi materi pelajaran,
+        tugas, pengalaman kuliah, dan belajar bersama.
+      </p>
+
+      <a href="#" class="btn">Lihat Diskusi</a>
+
+    </div>
+
+    <div class="card">
+
+      <h3>Anime & Film</h3>
+
+      <p>
+        Diskusi anime, movie, series,
+        rekomendasi tontonan, dan review.
+      </p>
+
+      <a href="#" class="btn">Lihat Diskusi</a>
+
+    </div>
+
+    <div class="card">
+
+      <h3>Musik</h3>
+
+      <p>
+        Bahas lagu favorit, album terbaru,
+        konser, dan rekomendasi musik.
+      </p>
+
+      <a href="#" class="btn">Lihat Diskusi</a>
+
+    </div>
+
+    <div class="card">
+
+      <h3>Olahraga</h3>
+
+      <p>
+        Diskusi sepak bola, basket,
+        badminton, dan berita olahraga terbaru.
+      </p>
+
+      <a href="#" class="btn">Lihat Diskusi</a>
+
+    </div>
+
+  </section>
+
+</body>
+</html>
