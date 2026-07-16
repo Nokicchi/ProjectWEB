@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anon Forum - Anonymous Discussion Community</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">🔒 Anon Forum</a>
+            <ul class="nav-links">
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#discussions">Discussions</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><button class="btn btn-primary" onclick="openPostModal()">Start Posting</button></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="no-login-badge">🔒 No Login Required - 100% Anonymous</div>
+        <h1>Speak Freely, Stay Anonymous</h1>
+        <p>Join the discussion instantly. No registration, no email, no tracking. Just pure anonymous conversation.</p>
+        <div class="hero-buttons">
+            <button class="btn btn-primary" onclick="openPostModal()"> Start Posting Now</button>
+            <a href="#categories" class="btn btn-secondary">Browse Topics</a>
+        </div>
+        <div class="stats">
+            <div class="stat-item"><div class="stat-number">50K+</div><div class="stat-label">Daily Posters</div></div>
+            <div class="stat-item"><div class="stat-number">1.2M</div><div class="stat-label">Discussions</div></div>
+            <div class="stat-item"><div class="stat-number">15M+</div><div class="stat-label">Messages</div></div>
+            <div class="stat-item"><div class="stat-number">0</div><div class="stat-label">Personal Data Collected</div></div>
+        </div>
+    </section>
+
+    <section class="container section" id="how-it-works">
+        <div class="quick-start">
+            <h3>Start Discussing in Seconds</h3>
+            <p>No accounts. No passwords. No email verification. Just pick a topic and start typing.</p>
+            <div class="steps">
+                <div class="step"><div class="step-number">1</div><span>Choose a Category</span></div>
+                <div class="step"><div class="step-number">2</div><span>Write Your Post</span></div>
+                <div class="step"><div class="step-number">3</div><span>Post Anonymously</span></div>
+            </div>
+            <button class="btn btn-primary" onclick="scrollToDiscussion()">Jump Into Discussion</button>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="search-container">
+            <span class="search-icon"></span>
+            <input type="text" class="search-input" placeholder="Search anonymous discussions...">
+        </div>
+    </section>
+
+    <section class="container section" id="categories">
+        <h2 class="section-title">Discussion Categories</h2>
+        <div class="categories-grid">
+            <div class="category-card" data-category="general">
+                <div class="category-header">
+                    <div class="category-icon">💬</div>
+                    <div><div class="category-name">General Discussion</div><div class="category-count">12.5K discussions</div></div>
+                </div>
+                <div class="category-description">Talk about anything and everything. A place for general conversations and community bonding.</div>
+            </div>
+            <div class="category-card" data-category="tech">
+                <div class="category-header">
+                    <div class="category-icon">💻</div>
+                    <div><div class="category-name">Technology</div><div class="category-count">8.3K discussions</div></div>
+                </div>
+                <div class="category-description">Discuss the latest in tech, programming, gadgets, and digital innovations.</div>
+            </div>
+            <div class="category-card" data-category="gaming">
+                <div class="category-header">
+                    <div class="category-icon">🎮</div>
+                    <div><div class="category-name">Gaming</div><div class="category-count">15.2K discussions</div></div>
+                </div>
+                <div class="category-description">Video games, board games, esports - all gaming discussions welcome here.</div>
+            </div>
+            <div class="category-card" data-category="entertainment">
+                <div class="category-header">
+                    <div class="category-icon">🎬</div>
+                    <div><div class="category-name">Entertainment</div><div class="category-count">6.7K discussions</div></div>
+                </div>
+                <div class="category-description">Movies, TV shows, music, books, and all forms of entertainment.</div>
+            </div>
+            <div class="category-card" data-category="privacy">
+                <div class="category-header">
+                    <div class="category-icon">🔒</div>
+                    <div><div class="category-name">Privacy & Security</div><div class="category-count">4.1K discussions</div></div>
+                </div>
+                <div class="category-description">Discussions about online privacy, security, encryption, and digital rights.</div>
+            </div>
+            <div class="category-card" data-category="help">
+                <div class="category-header">
+                    <div class="category-icon">💡</div>
+                    <div><div class="category-name">Help & Support</div><div class="category-count">9.8K discussions</div></div>
+                </div>
+                <div class="category-description">Need help? Ask questions and get support from our community members.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container section" id="discussions">
+        <h2 class="section-title">Trending Discussions</h2>
+        <div class="discussion-list">
+            <div class="discussion-item" data-category="privacy">
+                <div class="discussion-header">
+                    <a href="#" class="discussion-title">What are your thoughts on the future of AI and privacy? <span class="badge hot">HOT</span></a>
+                </div>
+                <div class="discussion-meta">
+                    <span class="meta-item"><span class="anonymous-tag">👤 Anonymous</span></span>
+                    <span class="meta-item">📅 2 hours ago</span>
+                    <span class="meta-item">💬 234 replies</span>
+                    <span class="meta-item">👁 5.2K views</span>
+                </div>
+                <div class="discussion-preview">With AI becoming more prevalent in our daily lives, how do we balance innovation with privacy protection? What measures should be taken...</div>
+            </div>
+            <div class="discussion-item" data-category="privacy">
+                <div class="discussion-header">
+                    <a href="#" class="discussion-title">Best practices for staying anonymous online in 2026 <span class="badge">POPULAR</span></a>
+                </div>
+                <div class="discussion-meta">
+                    <span class="meta-item"><span class="anonymous-tag">👤 Anonymous</span></span>
+                    <span class="meta-item"> 5 hours ago</span>
+                    <span class="meta-item">💬 189 replies</span>
+                    <span class="meta-item">👁 8.1K views</span>
+                </div>
+                <div class="discussion-preview">Looking for updated guides and tools for maintaining anonymity. What's working well for everyone these days?</div>
+            </div>
+            <div class="discussion-item" data-category="tech">
+                <div class="discussion-header">
+                    <a href="#" class="discussion-title">The rise of decentralized social platforms</a>
+                </div>
+                <div class="discussion-meta">
+                    <span class="meta-item"><span class="anonymous-tag">👤 Anonymous</span></span>
+                    <span class="meta-item"> 8 hours ago</span>
+                    <span class="meta-item">💬 156 replies</span>
+                    <span class="meta-item">👁 3.7K views</span>
+                </div>
+                <div class="discussion-preview">Are decentralized platforms the future of social media? Let's discuss the pros and cons of platforms like Mastodon, Bluesky, etc.</div>
+            </div>
+            <div class="discussion-item" data-category="general">
+                <div class="discussion-header">
+                    <a href="#" class="discussion-title">How to build a successful online community</a>
+                </div>
+                <div class="discussion-meta">
+                    <span class="meta-item"><span class="anonymous-tag">👤 Anonymous</span></span>
+                    <span class="meta-item">📅 12 hours ago</span>
+                    <span class="meta-item">💬 98 replies</span>
+                    <span class="meta-item">👁 2.4K views</span>
+                </div>
+                <div class="discussion-preview">What are the key elements that make an online community thrive? Share your experiences and tips!</div>
+            </div>
+            <div class="discussion-item" data-category="privacy">
+                <div class="discussion-header">
+                    <a href="#" class="discussion-title">Encryption tools everyone should know about <span class="badge">GUIDE</span></a>
+                </div>
+                <div class="discussion-meta">
+                    <span class="meta-item"><span class="anonymous-tag"> Anonymous</span></span>
+                    <span class="meta-item">📅 1 day ago</span>
+                    <span class="meta-item"> 267 replies</span>
+                    <span class="meta-item">👁 12K views</span>
+                </div>
+                <div class="discussion-preview">A comprehensive list of encryption tools and services that can help protect your digital privacy...</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container section" id="features">
+        <h2 class="section-title">Why Choose Anon Forum?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3 class="feature-title">Instant Access</h3>
+                <p class="feature-description">No registration required. Start posting immediately without creating an account.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔐</div>
+                <h3 class="feature-title">Complete Anonymity</h3>
+                <p class="feature-description">Your identity is never stored or tracked. We don't collect emails or names.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🛡️</div>
+                <h3 class="feature-title">End-to-End Encryption</h3>
+                <p class="feature-description">All messages are encrypted. Your conversations remain private and secure.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">👥</div>
+                <h3 class="feature-title">Active Community</h3>
+                <p class="feature-description">Join thousands of active users engaged in meaningful discussions daily.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3 class="feature-title">No App Required</h3>
+                <p class="feature-description">Access from any browser on any device. No downloads or installations.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"></div>
+                <h3 class="feature-title">Smart Moderation</h3>
+                <p class="feature-description">AI-powered moderation keeps discussions respectful while preserving anonymity.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Anon Forum</h3>
+                    <p style="color: var(--text-secondary);">A truly anonymous discussion platform. No accounts, no tracking, no compromises.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Community Guidelines</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Privacy</h3>
+                    <ul>
+                        <li><a href="#">No-Data Policy</a></li>
+                        <li><a href="#">How Anonymity Works</a></li>
+                        <li><a href="#">Security Measures</a></li>
+                        <li><a href="#">Transparency Report</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <ul>
+                        <li><a href="#">Tor Onion Service</a></li>
+                        <li><a href="#">Discord</a></li>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">RSS Feed</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2026 Anon Forum. Zero data collected. 100% anonymous. Built for privacy.
+            </div>
+        </div>
+    </footer>
+
+    <div id="postModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closePostModal()">&times;</span>
+            <h2>Post Anonymously</h2>
+            <p class="anonymous-tag" style="margin-bottom: 1.5rem;">👤 You are posting as Anonymous</p>
+            <form id="postForm">
+                <input type="text" class="modal-input" placeholder="Discussion Title" required>
+                <select id="postCategory" class="modal-input" required>
+                    <option value="general">💬 General Discussion</option>
+                    <option value="tech">💻 Technology</option>
+                    <option value="gaming">🎮 Gaming</option>
+                    <option value="entertainment">🎬 Entertainment</option>
+                    <option value="privacy">🔒 Privacy & Security</option>
+                    <option value="help">💡 Help & Support</option>
+                </select>
+                <textarea class="modal-textarea" placeholder="What's on your mind? Share your thoughts..." rows="5" required></textarea>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Publish Anonymously</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="threadModal" class="modal">
+        <div class="modal-content" style="max-width: 700px; max-height: 80vh; overflow-y: auto;">
+            <span class="close-btn" onclick="closeThreadModal()">&times;</span>
+            <div id="threadContent">
+            </div>
+        </div>
+    </div>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

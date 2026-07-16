@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anon Forum - Category Discussion</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="logo">🔒 Anon Forum</a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/#categories">All Categories</a></li>
+                <li><button class="btn btn-primary" onclick="openPostModal()">Start Posting</button></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="no-login-badge" id="categoryBadge">🔒 Loading...</div>
+        <h1 id="categoryTitle">Loading Category...</h1>
+        <p id="categoryDescription">Please wait while we load discussions.</p>
+        <div class="hero-buttons">
+            <button class="btn btn-primary" onclick="openPostModal()">Start Posting Now</button>
+            <a href="/" class="btn btn-secondary">🏠 Browse All Topics</a>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="search-container">
+            <span class="search-icon">🔍</span>
+            <input type="text" class="search-input" placeholder="Search discussions in this category...">
+        </div>
+    </section>
+
+    <section class="container section" id="discussions">
+        <h2 class="section-title" id="discussionListTitle">Discussions</h2>
+        <div class="discussion-list">
+            <p style="text-align:center; color:var(--text-secondary);">Loading discussions...</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Anon Forum</h3>
+                    <p style="color: var(--text-secondary);">A truly anonymous discussion platform. No accounts, no tracking, no compromises.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/#categories">Categories</a></li>
+                        <li><a href="/#features">Features</a></li>
+                        <li><a href="/#how-it-works">How It Works</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Privacy</h3>
+                    <ul>
+                        <li><a href="#">No-Data Policy</a></li>
+                        <li><a href="#">How Anonymity Works</a></li>
+                        <li><a href="#">Security Measures</a></li>
+                        <li><a href="#">Transparency Report</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <ul>
+                        <li><a href="#">Tor Onion Service</a></li>
+                        <li><a href="#">Discord</a></li>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">RSS Feed</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2026 Anon Forum. Zero data collected. 100% anonymous. Built for privacy.
+            </div>
+        </div>
+    </footer>
+
+    <div id="postModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closePostModal()">&times;</span>
+            <h2>Post Anonymously</h2>
+            <p class="anonymous-tag" style="margin-bottom: 1.5rem;">👤 You are posting as Anonymous</p>
+            <form id="postForm">
+                <input type="text" class="modal-input" placeholder="Discussion Title" required>
+                <select id="postCategory" class="modal-input" required>
+                    <option value="general">💬 General Discussion</option>
+                    <option value="tech">💻 Technology</option>
+                    <option value="gaming">🎮 Gaming</option>
+                    <option value="entertainment">🎬 Entertainment</option>
+                    <option value="privacy">🔒 Privacy & Security</option>
+                    <option value="help">💡 Help & Support</option>
+                </select>
+                <textarea class="modal-textarea" placeholder="What's on your mind? Share your thoughts..." rows="5" required></textarea>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Publish Anonymously</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="threadModal" class="modal">
+        <div class="modal-content" style="max-width: 700px; max-height: 80vh; overflow-y: auto;">
+            <span class="close-btn" onclick="closeThreadModal()">&times;</span>
+            <div id="threadContent">
+            </div>
+        </div>
+    </div>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="/js/category.js"></script>
+</body>
+</html>
